@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+  <!-- Macros -->
+  <xacro:macro name="create_color" params="name value">
+    <material name="${name}">
+      <color rgba="${value}"/>
+    </material>
+  </xacro:macro>
+
+  <xacro:macro name="gazebo_color" params="link color">
+    <gazebo reference="${link}">
+      <material>Gazebo/${color}</material>
+    </gazebo>
+  </xacro:macro>
+
+
+  <!-- Setting color for links -->
+  <xacro:create_color name="Gray" value="0.5 0.5 0.5 1"/>
+  <xacro:create_color name="DarkGray" value="0.1 0.1 0.1 0.5"/>
+  <xacro:create_color name="Black" value="0 0 0 1"/>
+  <xacro:create_color name="Red" value="1 0 0 1"/>
+  <xacro:create_color name="BlueGlow" value="0.5 0.5 0.5 1"/>
+
+  <xacro:gazebo_color link="base_link" color="BlueGlow"/>
+  <xacro:gazebo_color link="camera_link" color="Black"/>
+  <xacro:gazebo_color link="laser_link" color="Red"/>
+  <xacro:gazebo_color link="left_wheel_link" color="DarkGrey"/>
+  <xacro:gazebo_color link="right_wheel_link" color="DarkGrey"/>
+  <xacro:gazebo_color link="support_link" color="Grey"/>
+</robot>

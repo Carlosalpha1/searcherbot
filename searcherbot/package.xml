@@ -13,6 +13,7 @@
   <url type="repository">https://github.com/Carlosalpha1/searcherbot</url>
 
   <buildtool_depend>catkin</buildtool_depend>
+  <exec_depend>searcherbot_description</exec_depend>
 
   <export>
     <metapackage/>
