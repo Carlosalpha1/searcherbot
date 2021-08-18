@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <package format="2">
   <name>searcherbot_navigation</name>
-  <version>0.0.0</version>
+  <version>0.0.1</version>
   <description>The searcherbot_navigation package</description>
 
   <maintainer email="carlos2caminero@gmail.com">Carlos Caminero</maintainer>
