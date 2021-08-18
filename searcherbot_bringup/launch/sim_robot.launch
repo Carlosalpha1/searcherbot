@@ -1,19 +1,8 @@
 <launch>
 
-  <!-- Gazebo Settings -->
-  <arg name="debug" default="false" />
-  <arg name="gui" default="true" />
-  <arg name="pause" default="false" />
-  <arg name="world" default=""/>
-
-  <include file="$(find gazebo_ros)/launch/empty_world.launch">
-      <arg name="world_name" value="$(arg world)"/>
-      <arg name="debug" value="$(arg debug)"/>
-      <arg name="gui" value="$(arg gui)"/>
-      <arg name="paused" value="$(arg pause)"/>
-      <arg name="use_sim_time" value="true"/>
-  </include>
-
+  <!-- Gazebo World -->
+  <include file="$(find searcherbot_bringup)/launch/world.launch"/>
+  
   <!-- Spawn Robot -->
   <include file="$(find searcherbot_bringup)/launch/spawn.launch"/>
   
