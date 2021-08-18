@@ -20,6 +20,9 @@
   <material name="BlueGlow">
     <color rgba="0.5 0.5 0.5 1"/>
   </material>
+  <material name="Yellow">
+    <color rgba="1 1 0 1"/>
+  </material>
   <gazebo reference="base_link">
     <material>Gazebo/BlueGlow</material>
   </gazebo>
@@ -37,6 +40,25 @@
   </gazebo>
   <gazebo reference="support_link">
     <material>Gazebo/Grey</material>
+  </gazebo>
+  <gazebo reference="support_link2">
+    <material>Gazebo/Yellow</material>
+  </gazebo>
+  <link name="base_footprint">
+    <inertial>
+      <mass value="0.0001"/>
+      <origin xyz="0 0 0"/>
+      <inertia ixx="0.0001" ixy="0.0" ixz="0.0" iyy="0.0001" iyz="0.0" izz="0.0001"/>
+    </inertial>
+    <visual>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+        <box size="0.001 0.001 0.001"/>
+      </geometry>
+    </visual>
+  </link>
+  <gazebo reference="base_footprint">
+    <turnGravityOff>false</turnGravityOff>
   </gazebo>
   <link name="base_link">
     <inertial>
@@ -158,6 +180,31 @@
       </geometry>
     </collision>
   </link>
+  <link name="support_link2">
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <mass value="3.0"/>
+      <inertia ixx="0.00625" ixy="0" ixz="0" iyy="0.00625" iyz="0" izz="0.00625"/>
+    </inertial>
+    <visual>
+      <origin rpy="1.5708 0 0" xyz="0 0 0"/>
+      <geometry>
+        <sphere radius="0.125"/>
+      </geometry>
+      <material name="Yellow"/>
+    </visual>
+    <collision name="support2">
+      <origin rpy="1.5708 0 0" xyz="0 0 0"/>
+      <geometry>
+        <sphere radius="0.125"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint name="base_footprint_joint" type="fixed">
+    <origin rpy="0 0 0" xyz="0 0 0.3"/>
+    <parent link="base_footprint"/>
+    <child link="base_link"/>
+  </joint>
   <joint name="camera_joint" type="fixed">
     <origin rpy="0 0 0" xyz="0.225 0 0.225"/>
     <parent link="base_link"/>
@@ -173,14 +220,14 @@
     <parent link="base_link"/>
     <child link="left_wheel_link"/>
     <axis xyz="0 0 1.0"/>
-    <limit effort="1000.0" velocity="5.0"/>
+    <limit effort="100.0" velocity="5.0"/>
   </joint>
   <joint name="right_wheel_joint" type="continuous">
     <origin rpy="-1.5708 0 0" xyz="0 -0.35 0"/>
     <parent link="base_link"/>
     <child link="right_wheel_link"/>
     <axis xyz="0 0 1.0"/>
-    <limit effort="1000.0" velocity="5.0"/>
+    <limit effort="100.0" velocity="5.0"/>
   </joint>
   <joint name="support_joint" type="continuous">
     <origin rpy="-1.5708 0 0" xyz="0.11 0 -0.175"/>
@@ -189,6 +236,29 @@
     <axis xyz="0 0 1.0"/>
     <limit effort="0" velocity="0"/>
   </joint>
+  <joint name="support_joint2" type="continuous">
+    <origin rpy="-1.5708 0 0" xyz="-0.15 0 -0.175"/>
+    <parent link="base_link"/>
+    <child link="support_link2"/>
+    <axis xyz="0 0 1.0"/>
+    <limit effort="0" velocity="0"/>
+  </joint>
+  <transmission name="left_wheel_joint_trans">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="left_wheel_joint"/>
+    <actuator naem="left_wheel_joint_motor">
+      <hardwareInterface>EffortJointInterface</hardwareInterface>
+      <mechanicalReduction>1.0</mechanicalReduction>
+    </actuator>
+  </transmission>
+  <transmission name="right_wheel_joint_trans">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="right_wheel_joint"/>
+    <actuator naem="right_wheel_joint_motor">
+      <hardwareInterface>EffortJointInterface</hardwareInterface>
+      <mechanicalReduction>1.0</mechanicalReduction>
+    </actuator>
+  </transmission>
   <gazebo reference="laser_link">
     <turnGravityOff>false</turnGravityOff>
     <sensor name="laser360_sensor" type="ray">
@@ -200,8 +270,8 @@
           <horizontal>
             <samples>720</samples>
             <resolution>1</resolution>
-            <min_angle>-3.14</min_angle>
-            <max_angle>3.14</max_angle>
+            <min_angle>-1.57</min_angle>
+            <max_angle>1.57</max_angle>
           </horizontal>
         </scan>
         <range>
@@ -277,7 +347,8 @@
       <commandTopic>cmd_vel</commandTopic>
       <odometryFrame>odom</odometryFrame>
       <odometryTopic>odom</odometryTopic>
-      <robotBaseFrame>base_link</robotBaseFrame>
+      <robotBaseFrame>base_footprint</robotBaseFrame>
     </plugin>
   </gazebo>
 </robot>
+

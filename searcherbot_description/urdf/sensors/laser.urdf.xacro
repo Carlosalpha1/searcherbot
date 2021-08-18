@@ -5,7 +5,7 @@
   <xacro:macro name="set_laser" params="reference_frame">
     <gazebo reference="${reference_frame}">
       <turnGravityOff>false</turnGravityOff>
-      <sensor type="ray" name="laser360_sensor">
+      <sensor type="ray" name="laser180_sensor">
         <pose>0 0 0 0 0 0</pose>
         <visualize>false</visualize>
         <update_rate>40</update_rate>
@@ -14,8 +14,8 @@
             <horizontal>
               <samples>720</samples>
               <resolution>1</resolution>
-              <min_angle>-3.14</min_angle>
-              <max_angle>3.14</max_angle>
+              <min_angle>-1.57</min_angle>
+              <max_angle>1.57</max_angle>
             </horizontal>
           </scan>
           <range>
