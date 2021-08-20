@@ -2,8 +2,8 @@
 Changelog for package searcherbot_bringup
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+0.0.2 (2021-08-20)
+------------------
 * update
 * teleop and generate_map launchers
 * Contributors: Carlos Caminero

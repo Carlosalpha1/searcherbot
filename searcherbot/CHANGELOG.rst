@@ -2,8 +2,8 @@
 Changelog for package searcherbot
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+0.0.2 (2021-08-20)
+------------------
 * update
 * Contributors: Carlos Caminero
 
