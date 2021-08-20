@@ -2,6 +2,11 @@
 Changelog for package searcherbot
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* update
+* Contributors: Carlos Caminero
+
 0.0.1 (2021-08-18)
 ------------------
 * (searcherbot_bringup) sim_robot.launch
