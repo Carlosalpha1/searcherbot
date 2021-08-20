@@ -3,9 +3,8 @@
   <name>searcherbot</name>
   <version>0.0.1</version>
   <description>
-    The searcherbot package.
-    A simple robot that is able to navigate
-    to perform search and transport tasks
+    It is a simple robot that is able
+    to navigate to perform search and transport tasks
   </description>
 
   <maintainer email="carlos2caminero@gmail.com">Carlos Caminero</maintainer>
