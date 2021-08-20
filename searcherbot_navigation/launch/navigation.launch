@@ -14,6 +14,6 @@
     <arg name="initial_pose_a" value="$(arg initial_pose_a)"/>
   </include>
 
-  <include file="$(find diff_wheeled_robot_gazebo)/launch/includes/move_base.launch.xml"/>
+  <include file="$(find searcherbot_navigation)/launch/includes/move_base.launch.xml"/>
 
 </launch>

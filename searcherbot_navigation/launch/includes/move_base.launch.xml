@@ -8,6 +8,9 @@
     <rosparam file="$(find searcherbot_navigation)/params/local_costmap_params.yaml" command="load" />
     <rosparam file="$(find searcherbot_navigation)/params/global_costmap_params.yaml" command="load" /> 
     <rosparam file="$(find searcherbot_navigation)/params/base_local_planner_params.yaml" command="load" />
+    <rosparam file="$(find searcherbot_navigation)/params/dwa_local_planner_params.yaml" command="load" />
+    <rosparam file="$(find searcherbot_navigation)/params/move_base_params.yaml" command="load" />
+
  </node>
 
 </launch>
