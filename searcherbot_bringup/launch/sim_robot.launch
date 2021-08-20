@@ -5,7 +5,10 @@
   
   <!-- Spawn Robot -->
   <include file="$(find searcherbot_bringup)/launch/spawn.launch"/>
-  
+
+  <!-- Launch Navigation -->
+  <!-- <include file="$(find searcherbot_navigation)/launch/navigation.launch"/> -->
+
   <!-- Rviz Settings -->
   <node name="rviz" pkg="rviz" type="rviz" args="-d $(find searcherbot_description)/rviz/searcherbot.rviz"/>
 

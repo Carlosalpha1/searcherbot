@@ -1,0 +1,4 @@
+<launch>
+  <include file="$(find searcherbot_navigation)/launch/gmapping.launch"/>
+  <include file="$(find searcherbot_bringup)/launch/teleop.launch"/>
+</launch>
