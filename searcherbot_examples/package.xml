@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<package format="2">
+  <name>searcherbot_examples</name>
+  <version>0.0.0</version>
+  <description>
+    The searcherbot examples package
+    contains some test applications for the robot
+  </description>
+
+  <maintainer email="carlos2caminero@gmail.com">Carlos Caminero</maintainer>
+
+  <license>Apache 2</license>
+
+  <buildtool_depend>catkin</buildtool_depend>
+  <build_depend>geometry_msgs</build_depend>
+  <build_depend>roscpp</build_depend>
+  <build_depend>roslint</build_depend>
+  <build_depend>sensor_msgs</build_depend>
+  <build_depend>std_msgs</build_depend>
+  <build_depend>behaviortree_cpp_v3</build_depend>
+  <build_export_depend>geometry_msgs</build_export_depend>
+  <build_export_depend>roscpp</build_export_depend>
+  <build_export_depend>roslint</build_export_depend>
+  <build_export_depend>sensor_msgs</build_export_depend>
+  <build_export_depend>std_msgs</build_export_depend>
+  <build_export_depend>behaviortree_cpp_v3</build_export_depend>
+  <exec_depend>geometry_msgs</exec_depend>
+  <exec_depend>roscpp</exec_depend>
+  <exec_depend>roslint</exec_depend>
+  <exec_depend>sensor_msgs</exec_depend>
+  <exec_depend>std_msgs</exec_depend>
+  <exec_depend>behaviortree_cpp_v3</exec_depend>
+
+  <export>
+  </export>
+</package>

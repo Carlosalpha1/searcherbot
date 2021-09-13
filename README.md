@@ -7,5 +7,14 @@ It contains initial launch and config files to load the robot
 ## searcherbot_description
 It contains urdf and xacro files of the robot
 
+## searcherbot_examples
+It contains some execution examples using behavior trees, ROS Navigation Stack, (more examples in process)
+
 ## searcherbot_navigation
 It contains config files to be used with ROS Navigation Stack
+
+### Example Usage:
+~~~
+$ roslaunch searcherbot_bringup sim_robot.launch stage:=(1|2 ...)
+$ rosrun searcherbot_examples bumpgo
+~~~
