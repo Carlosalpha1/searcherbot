@@ -2,6 +2,9 @@
 Changelog for package searcherbot_description
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+
 0.0.2 (2021-08-20)
 ------------------
 * update

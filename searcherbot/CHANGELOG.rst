@@ -2,6 +2,11 @@
 Changelog for package searcherbot
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* update metapackage
+* Contributors: Carlos Caminero
+
 0.0.2 (2021-08-20)
 ------------------
 * update

@@ -2,6 +2,9 @@
 Changelog for package searcherbot_navigation
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+
 0.0.2 (2021-08-20)
 ------------------
 * fix navigation and create Navigator

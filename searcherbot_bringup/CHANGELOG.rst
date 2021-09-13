@@ -2,6 +2,11 @@
 Changelog for package searcherbot_bringup
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* adding stage 2
+* Contributors: Carlos Caminero
+
 0.0.2 (2021-08-20)
 ------------------
 * update
