@@ -18,3 +18,8 @@ It contains config files to be used with ROS Navigation Stack
 $ roslaunch searcherbot_bringup sim_robot.launch stage:=(1|2 ...)
 $ rosrun searcherbot_examples bumpgo
 ~~~
+
+*IMPORTANT*: It is necessary this command in $HOME/.bashrc to avoid some Gazebo problems:
+~~~
+$ export GAZEBO_MODEL_PATH=<absolute_path_to_searcherbot>/searcherbot_bringup/models:$GAZEBO_MODEL_PATH
+~~~
