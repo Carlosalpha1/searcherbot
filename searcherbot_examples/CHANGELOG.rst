@@ -2,8 +2,8 @@
 Changelog for package searcherbot_examples
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+0.0.3 (2021-09-16)
+------------------
 * adding searcherbot_examples (bumpgo)
 * Contributors: Carlos Caminero
 

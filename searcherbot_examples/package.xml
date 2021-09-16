@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <package format="2">
   <name>searcherbot_examples</name>
-  <version>0.0.2</version>
+  <version>0.0.3</version>
   <description>
     The searcherbot examples package
     contains some test applications for the robot
